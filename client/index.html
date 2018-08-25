@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+<div class="row">
+    <ul id="tabs-swipe-demo" class="tabs">
+        <li class="tab col s3"><a href="#test-swipe-1">Home</a></li>
+        <li class="tab col s3"><a href="#test-swipe-2">Downloads</a></li>
+        <li class="tab col s3"><a href="#test-swipe-3">Sharing</a></li>
+    </ul>
+
+    <!--Home Page Div to enter file hash -->
+    <div id="test-swipe-1" class="col s12 blue">
+        <div class="row"></div>
+        <form id="enter_file_hash" onsubmit="return addFileToDownload()">
+            <div class="input-field col s11 left">
+                <i class="material-icons prefix white-text">link</i>
+                <input type="text" id="file_hash_input" class="autocomplete white-text">
+                <label for="file_hash_input" class="white-text">
+                    Enter File Hash Here
+                </label>
+            </div>
+            <div class="col s1 right">
+                <button type="submit" class="btn-floating btn-large waves-effect waves-light green">
+                    <i class="material-icons">navigate_next</i>
+                </button>
+            </div>
+        </form>
+        <h5>Downloading Files</h5>
+        <div class="container">
+            <div class="col s12" id="dowing_div">
+
+            </div>
+        </div>
+    </div>
+    <!--Home Page Div to enter file hash end here-->
+
+    <div id="test-swipe-2" class="col s12 red">Test 2</div>
+    <div id="test-swipe-3" class="col s12 green">Test 3</div>
+</div>
+
+<!--Scripts Area-->
+<script>window.$ = window.jQuery = require('./assets/plugins/jquery/jquery-3.3.1.min.js');</script>
+<script src="assets/plugins/materialize/js/materialize.min.js"></script>
+<script src="../node_modules/mustache/mustache.min.js"></script>
+<script src="assets/js/app.js"></script>
+<!--<script src="assets/js/custom.js"></script>-->
+</body>
+</html>
